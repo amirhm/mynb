@@ -1,4 +1,4 @@
-# Formating the jupyeter notebooks
+# Formating the jupyter notebooks
 An small package to clear all the outputs of a jupyter notebooks. 
 
 To use versioning on the notebooks, it is practical to clear the outputs of all cells (to only keep the code). 
