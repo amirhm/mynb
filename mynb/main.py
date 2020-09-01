@@ -36,7 +36,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
 
     verbose = args.quite
     filename = args.filename
-    files: List[str] = glob.glob(filename)
+    files = glob.glob(filename)
 
     for file in files:
         if not(verbose):
