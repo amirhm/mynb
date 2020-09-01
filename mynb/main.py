@@ -3,10 +3,12 @@ from nbformat import write as nb_write
 import argparse
 import os
 import glob
+from typing import Optional
+from typing import Sequence
 from typing import List
 
 
-def check_file(filename, inplace):
+def check_file(filename: List[str], inplace: bool):
     with open(filename, 'r') as f:
         nb = nb_read(f, as_version=4)
 
@@ -25,7 +27,7 @@ def check_file(filename, inplace):
         nb_write(nb, f)
 
 
-def main():
+def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument('filename', help="filename")
     parser.add_argument('--inplace', '-p', action='store_true', help="filename")
@@ -40,6 +42,7 @@ def main():
         if not(verbose):
             print(file)
         check_file(file, args.inplace)
+    return 0
 
 
 if __name__ == "__main__":
