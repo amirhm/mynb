@@ -1,3 +1,5 @@
+![https://github.com/amirhm/mynb/actions?query=workflow%3AWindows](https://github.com/amirhm/mynb/workflows/Windows/badge.svg)
+
 # Formating the jupyter notebooks
 An small package to clear all the outputs of a jupyter notebooks. 
 
